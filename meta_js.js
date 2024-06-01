@@ -15,12 +15,13 @@ const myNFTs = [];
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function mintNFT (name , eyecolor, shirtcolor, bodytype) {
+function mintNFT (name , eyecolor, shirtcolor, bodytype ,height) {
     const NFT = {
         "name" : name,
         "eyecolor" : eyecolor,
         "shirtcolor" : shirtcolor,
-        "bodytype" : bodytype
+        "bodytype" : bodytype,
+        "Height" : height
     }
    myNFTs.push(NFT);
    console.log("Minted : " + name);
@@ -37,6 +38,7 @@ function listNFTs () {
         console.log("EyeColor:\t\t"+myNFTs[i].eyecolor);
         console.log("Shirtcolor:\t\t"+myNFTs[i].shirtcolor);
         console.log("BodyType: \t \t"+myNFTs[i].bodytype);
+        console.log("Height: \t \t"+myNFTs[i].Height +" cm");
 
     }
 
@@ -49,10 +51,11 @@ function getTotalSupply() {
 }
 
 // call your functions below this line
-mintNFT("Joy","Green","Black","Female");
-mintNFT("Sam","Green","Blue","Male");
-mintNFT("Roy","lue","White","Female");
-mintNFT("Monty","Green","Black","Male");
-mintNFT("Jim","Blue","Yellow","Female");
+mintNFT("Joy","Green","Black","Female",165);
+mintNFT("Sam","Green","Blue","Male",160);
+mintNFT("Roy","lue","White","Female",176);
+mintNFT("Monty","Green","Black","Male",180);
+mintNFT("Jim","Blue","Yellow","Female",173);
 listNFTs();
 getTotalSupply();
+
